@@ -1,0 +1,70 @@
+@scope (.hero) {
+  /* Style hero Section */
+
+  &.hero {
+    padding-block-start: 150px;
+  }
+  .container {
+    display: grid;
+    gap: 50px;
+    text-transform: capitalize;
+  }
+  /* Hero Content */
+  .hero-content {
+    .hero-subtitle {
+      background-color: var(--bg-misty-rose);
+      color: var(--text-light-coral);
+      font-size: var(--fontSize-7);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      max-width: max-content;
+      padding: 8px 12px;
+      border-radius: var(--radius-pill);
+    }
+    .hero-title {
+      margin-block: 20px;
+    }
+    .hero-text {
+      margin-block-end: 30px;
+    }
+    .wrapper {
+      .btn-secondary {
+        margin-block-end: 20px;
+      }
+      .hero-btn {
+        color: var(--text-gunmetal);
+        font-weight: var(--weight-medium);
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        transition: var(--transition-1);
+        &:is(:hover, :focus-visible) {
+          color: var(--text-majorelle-blue);
+        }
+        .btn-img {
+          position: relative;
+          width: 60px;
+          height: 60px;
+          padding: 2px;
+          background-color: var(--bg-gainsboro);
+          box-shadow: var(--shadow-1);
+          .img-cover {
+            border-radius: inherit;
+          }
+          ion-icon {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translate(50%, -50%);
+            background-color: var(--bg-white);
+            padding: 10px;
+            border-radius: var(--radius-circle);
+            box-shadow: var(--shadow-1);
+          }
+        }
+      }
+    }
+  }
+  /* End Hero Content */
+}

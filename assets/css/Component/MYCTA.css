@@ -1,0 +1,19 @@
+@scope (.cta) {
+  .cta-card {
+    background-color: var(--bg-misty-rose);
+    padding: 60px 20px;
+    text-align: center;
+    text-transform: capitalize;
+    border-radius: var(--radius-30);
+    .section-title {
+      margin-block: 0 20px;
+      .img {
+        display: inline-block;
+      }
+    }
+    .btn {
+      margin-inline: auto;
+      margin-block-start: 20px;
+    }
+  }
+}

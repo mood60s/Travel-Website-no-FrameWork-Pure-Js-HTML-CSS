@@ -1,0 +1,112 @@
+@scope (.footer) {
+  :scope {
+    text-transform: capitalize;
+  }
+  .footer-top {
+    display: grid;
+    gap: 40px;
+    padding-block: 60px;
+    /* Brand */
+    .footer-brand {
+      img {
+        width: 180px;
+      }
+      .footer-text {
+        margin-block: 20px;
+      }
+      .social-list {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        .social-link {
+          color: var(--text-majorelle-blue);
+          font-size: 2rem;
+          padding: 10px;
+          border-radius: var(--radius-pill);
+          transition: var(--transition-1);
+          transform: scale(0.9);
+          box-shadow: 0 4px 4px black;
+          &:is(:hover, :focus-visible) {
+            background-color: var(--bg-majorelle-blue);
+            color: var(--text-white);
+            transform: scale(1);
+            box-shadow: 0px 0px 0px;
+          }
+        }
+      }
+    }
+    /* Brand */
+    .footer-list {
+      .footer-list-title {
+        color: var(--text-gunmetal);
+        font-size: var(--fontSize-5);
+        font-weight: var(--weight-semiBold);
+        margin-block-end: 15px;
+        text-shadow: 1px 1px 2px #777;
+      }
+      .footer-link {
+        margin-block-start: 10px;
+        &:is(:hover, :focus-visible) {
+          text-decoration: underline;
+        }
+      }
+      .footer-text {
+        margin-block-end: 15px;
+      }
+      .input-wrapper {
+        position: relative;
+        .input-field {
+          height: 55px;
+          padding-inline: 25px 60px;
+          border: 1px solid var(--border-gainsboro);
+          color: var(--text-gunmetal);
+          border-radius: var(--radius-pill);
+          &:focus {
+            border-color: var(--bg-majorelle-blue);
+          }
+        }
+        .input-btn {
+          width: 45px;
+          height: 45px;
+          background-color: var(--bg-majorelle-blue);
+          font-size: 2rem;
+          display: grid;
+          place-items: center;
+          border-radius: var(--radius-circle);
+          position: absolute;
+          top: 5px;
+          right: 5px;
+          bottom: 5px;
+          transition: var(--transition-1);
+          color: var(--text-white);
+          transform: scale(0.9);
+          &:is(:hover, :focus-visible) {
+            background-color: var(--bg-ocean-blue);
+            transform: scale(1) rotate(360deg);
+          }
+          ion-icon {
+            transform: translateX(-2px) rotate(45deg);
+          }
+        }
+      }
+    }
+  }
+  .footer-bottom {
+    padding-block: 30px;
+    border-block-start: 1px solid var(--border-gainsboro);
+    .copyright {
+      margin-block-end: 20px;
+      line-height: 1.7;
+      span {
+        display: inline-block;
+        color: var(--text-majorelle-blue);
+        font-weight: var(--weight-medium);
+        font-variant: small-caps;
+        font-size: 2rem;
+      }
+    }
+    .footer-bottom-link:is(:hover, :focus-visible) {
+      text-decoration: underline;
+    }
+  }
+}

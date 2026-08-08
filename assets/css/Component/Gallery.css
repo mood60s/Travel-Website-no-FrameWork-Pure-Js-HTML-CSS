@@ -1,0 +1,23 @@
+@scope (.gallery) {
+  :scope {
+    text-transform: capitalize;
+  }
+  .container {
+    .section-title {
+      margin-block-end: 40px;
+    }
+    .gallery-list {
+      display: grid;
+      gap: 15px;
+      .gallery-item {
+        .item-banner {
+          border-radius: var(--radius-30);
+          img {
+            filter: grayscale(100%);
+          }
+          &:hover img {filter: grayscale(0);}
+        }
+      }
+    }
+  }
+}

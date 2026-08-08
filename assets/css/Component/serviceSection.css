@@ -1,0 +1,51 @@
+@scope (.service) {
+  :scope {
+  }
+  .container {
+    display: grid;
+    gap: 25px;
+    .service-card:nth-child(2) {
+      background-color: var(--bg-chrome-yellow-alpha-5);
+    }
+    .service-card:nth-child(3) {
+      background-color: var(--bg-red-salsa-alpha-5);
+    }
+    .service-card:nth-child(4) {
+      background-color: var(--bg-majorelle-blue-alpha-5);
+    }
+    .service-card {
+      position: relative;
+      overflow: hidden;
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: var(--bg-white);
+        transform: scale(0);
+        transform-origin: center center;
+        opacity: 0;
+      }
+      &:hover::before {
+        animation: flash 0.5s linear;
+      }
+      padding: 25px 20px;
+      border-radius: var(--radius-20);
+      .card-title {
+        margin-block: 10px 5px;
+      }
+    }
+  }
+  @keyframes flash {
+    from {
+      transform: scale(0);
+      opacity: 0;
+    }
+    to {
+      transform: scale(2);
+      opacity: 0.6;
+    }
+  }
+}

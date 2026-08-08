@@ -1,0 +1,62 @@
+@scope (.desti) {
+  :scope {
+    text-transform: capitalize;
+  }
+  .section-title {
+    margin-block-end: 40px;
+  }
+  .desti-list {
+    display: grid;
+    gap: 30px;
+    .desti-card {
+      &:is(:hover, :focus-visible) .img-cover {
+        transform: scale(1.05);
+      }
+      .card-banner {
+        position: relative;
+        border-radius: var(--radius-30);
+        .card-price {
+          position: absolute;
+          top: 20px;
+          right: 20px;
+          background-color: var(--bg-white);
+          color: var(--text-majorelle-blue);
+          font-weight: var(--weight-bold);
+          font-size: 1.8rem;
+          line-height: 1.45;
+          padding: 5px 15px;
+          border-radius: var(--radius-pill);
+        }
+      }
+      .card-content {
+        & :is(.card-rating, .span) {
+          display: flex;
+          align-items: center;
+        }
+        .card-rating {
+          margin-block-start: 10px;
+          gap: 10px;
+        }
+        .span {
+          background-color: var(--bg-sunglow-alpha-10);
+          padding: 4px 12px;
+          border-radius: var(--radius-pill);
+          ion-icon {
+            color: var(--text-sunglow);
+          }
+        }
+        .card-title {
+          margin-block: 15px 5px;
+          transition: var(--transition-1);
+          &:is(:hover, :focus-visible) {
+            color: var(--text-majorelle-blue);
+          }
+        }
+      }
+    }
+  }
+  .btn {
+    margin-inline: auto;
+    margin-block-start: 40px;
+  }
+}
